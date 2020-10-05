@@ -48,6 +48,8 @@ client.on("message", async (msg) => {
       channel: channel
     }).then(() => {
       msg.reply("Slackへの送信に成功しました");
+    }).catch(() => {
+      msg.reply('Slackへの送信に失敗しました。');
     });
   }
 });
