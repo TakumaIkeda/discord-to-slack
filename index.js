@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 require("dotenv").config();
 const axios = require("axios");
+const express = require('express');
+const app = express();
 
 client.on("ready", () => {
   console.log(`${client.user.username} でログインしています。`);
@@ -53,5 +55,11 @@ client.on("message", async (msg) => {
     });
   }
 });
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(process.env.PORT);
 
 client.login(process.env.DISCORD_TOKEN);
