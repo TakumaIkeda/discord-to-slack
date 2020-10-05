@@ -20,7 +20,7 @@ client.on("message", async (msg) => {
     const discordChannel = msg.channel.name;
     let name;
     let icon;
-    const channel = discordChannel === '#一般' ? 'general' : `#${discordChannel}`;
+    const channel = discordChannel === '一般' ? 'general' : `#${discordChannel}`;
     switch (discriminator) {
       case process.env.FIRST_USER_ID:
         name = process.env.FIRST_USER_NAME;
