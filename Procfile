@@ -1,1 +1,1 @@
-pbot:yarn start
+discordbot: npm start
