@@ -52,7 +52,7 @@ client.on("message", async (msg) => {
       msg.reply('Slackへの送信に失敗しました。');
     });
   } else if (msg.content.startsWith('/noconfirmtransfer')) {
-    const content = msg.content.replace(/\/transfer/, "");
+    const content = msg.content.replace(/\/noconfirmtransfer/, "");
     const discriminator = msg.author.discriminator;
     const discordChannel = msg.channel.name;
     let name;
